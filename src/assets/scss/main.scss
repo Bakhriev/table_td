@@ -27,32 +27,12 @@
 }
 
 .table-wrapper {
-	&__table {
-	}
-
 	&__title {
 		margin-bottom: 22px;
 	}
 }
 
 .box {
-	padding-top: 12px;
-	padding-bottom: 8px;
-	font-family: var(--font-family);
-	font-weight: 400;
-	font-size: 13px;
-	line-height: 120%;
-	color: #000;
-
-	b {
-		display: block;
-		margin-bottom: 10px;
-		font-family: var(--font-family);
-		font-weight: 600;
-		font-size: 15px;
-		line-height: 120%;
-		color: #000;
-	}
 }
 
 .table {
@@ -60,15 +40,7 @@
 	gap: 8px;
 
 	&__left {
-		.box {
-			&:not(:last-child) {
-				border-bottom: 1px solid #bec2c3;
-			}
-		}
-		padding: 0 20px;
-
-		padding-top: 45px;
-		padding-bottom: 12px;
+		padding: 60px 20px 0 20px;
 
 		box-shadow: 1px 1px 13px 1px rgba(0, 0, 0, 0.14);
 		border-radius: 6px;
@@ -76,6 +48,30 @@
 		max-width: 240px;
 		width: 100%;
 		flex-shrink: 0;
+	}
+
+	&__left-col {
+		padding-top: 12px;
+		padding-bottom: 12px;
+
+		font-size: 13px;
+		line-height: 120%;
+		color: #000;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid #bec2c3;
+		}
+
+		b {
+			margin-bottom: 10px;
+
+			display: block;
+
+			font-weight: 600;
+			font-size: 15px;
+			line-height: 120%;
+			color: #000;
+		}
 	}
 
 	&__right {
@@ -90,7 +86,7 @@
 	}
 
 	&__col {
-		padding: 10px 0;
+		padding: 12px 0;
 
 		&:not(:last-child) {
 			border-bottom: 1px solid #ffffff;

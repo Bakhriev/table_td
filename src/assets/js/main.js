@@ -1,15 +1,13 @@
-const leftCols = document.querySelectorAll('.box');
-const rightTables = document.querySelectorAll('.table__content');
+const leftSideColumns = document.querySelectorAll('.table__left-col');
+const rightSideTables = document.querySelectorAll('.table__content');
 
-const toSameHeight = (index, value) => {
-	rightTables.forEach(elem => {
-		const cols = elem.querySelectorAll('.table__col');
-		console.log(value);
-
-		cols[index].style.height = value + 'px';
+const setColumnHeight = (columnIndex, height) => {
+	rightSideTables.forEach(table => {
+		const columns = table.querySelectorAll('.table__col');
+		columns[columnIndex].style.minHeight = height + 'px';
 	});
 };
 
-for (let i = 0; i < leftCols.length; i++) {
-	toSameHeight(i, leftCols[i].offsetHeight);
+for (let i = 0; i < leftSideColumns.length; i++) {
+	setColumnHeight(i, leftSideColumns[i].offsetHeight);
 }
