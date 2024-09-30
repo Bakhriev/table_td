@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	@include('./template/_head.html')
+	<body>
+		<div class="app">
+			@include('./assets/components/overlay/overlay.html')
+			@include('./assets/components/header/header.html')
+			<main class="main">
+				<!--  -->
+
+				<div class="table-wrapper">
+					<div class="title title-wrapper__title">
+						Стоимость пакетных внедрений
+					</div>
+
+					<div class="table table-wrapper__table">
+						<div class="table__row">
+							<div class="table__col"></div>
+							<div class="table__col">Базовый</div>
+							<div class="table__col">Стандартный</div>
+							<div class="table__col">Расширенный</div>
+							<div class="table__col">Расширенный</div>
+							<div class="table__col">Дополнительные пакеты</div>
+							<div class="table__col">Цена</div>
+						</div>
+
+						<div class="table__row">
+							<div class="table__col">
+								<b>Основные настройки</b>
+								<span>Приглашение пользователей</span>
+							</div>
+							<div class="table__col">До 10</div>
+							<div class="table__col">До 20</div>
+							<div class="table__col">До 50</div>
+							<div class="table__col">Блок по 10 штук</div>
+							<div class="table__col">3 000</div>
+						</div>
+					</div>
+				</div>
+
+				<!--  -->
+			</main>
+			@include('./assets/components/footer/footer.html')
+		</div>
+		@include('./template/_scripts.html')
+	</body>
+</html>
