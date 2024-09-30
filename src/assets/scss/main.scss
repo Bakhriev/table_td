@@ -20,12 +20,53 @@
 
 .table {
 	&__row {
+		display: grid;
+		grid-template-columns: 240px repeat(5, 1fr);
+		column-gap: 10px;
+
+		&:first-child {
+			.table__col {
+				margin-bottom: 8px;
+			}
+		}
+
+		.table__col {
+			&:first-child {
+				background: #fff;
+				box-shadow: 1px 1px 13px 1px rgba(0, 0, 0, 0.14);
+			}
+		}
 	}
 
 	&__col {
+		border-radius: 6px;
+		padding: 4px 14px;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		&_variant_primary {
+			background: #47adf4;
+		}
+
+		&_variant_secondary {
+			background: #d5ecfe;
+		}
 	}
 }
+.title {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 120%;
+	color: var(--dark-blue);
+}
+
 .table-wrapper {
 	&__table {
+	}
+
+	&__title {
+		margin-bottom: 22px;
 	}
 }
