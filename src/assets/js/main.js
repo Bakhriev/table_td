@@ -1,32 +1,24 @@
-const initTable = index => {
-	const table = document.querySelectorAll('.table')[index];
+const tables = document.querySelectorAll('.table');
 
-	const leftSideColumns = table.querySelectorAll('.table__left-col');
-	const rightSideTables = table.querySelectorAll('.table__col-wrapper');
+tables.forEach(table => {
+	const leftCols = table.querySelectorAll('.table__left-col');
+	const rightCols = table.querySelectorAll('.table__col');
 
-	const setColumnHeight = (columnIndex, height, elem) => {
-		rightSideTables.forEach(table => {
-			const columns = table.querySelectorAll('.table__col');
+	let maxValue;
 
-			let maxValue;
-			for (let i = 0; i < columns.length; i++) {
-				maxValue = Math.round(
-					Math.max(height, Number(columns[columnIndex].clientHeight))
-				);
-			}
+	leftCols.forEach((elem, i) => {
+		const dataId = elem.dataset.col;
 
-			console.log(maxValue);
+		const identicalCols = [
+			...document.querySelectorAll(`[data-col="${dataId}"]`),
+		];
 
-			columns[columnIndex].style.minHeight = maxValue + 'px';
-			elem.style.minHeight = maxValue + 'px';
-		});
-	};
+		const heights = identicalCols.map(col => col.clientHeight + 2);
 
-	for (let i = 0; i < leftSideColumns.length; i++) {
-		setColumnHeight(i, leftSideColumns[i].offsetHeight, leftSideColumns[i]);
-	}
-};
+		const maxValue = Math.max(...heights);
 
-initTable(0);
-// initTable(1);
-// initTable(2);
+		identicalCols.forEach(elem => (elem.style.minHeight = `${maxValue}px`));
+
+		console.log(maxValue);
+	});
+});
