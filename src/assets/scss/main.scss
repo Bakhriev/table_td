@@ -22,7 +22,7 @@
 	font-family: var(--font-family);
 	font-weight: 600;
 	font-size: 40px;
-	line-height: 120%;
+
 	color: var(--dark-blue);
 }
 
@@ -44,7 +44,7 @@
 
 		box-shadow: 1px 1px 13px 1px rgba(0, 0, 0, 0.14);
 		border-radius: 6px;
-		background: #fff;
+		background: var(--white);
 		max-width: 240px;
 		width: 100%;
 		flex-shrink: 0;
@@ -55,8 +55,8 @@
 		padding-bottom: 12px;
 
 		font-size: 13px;
-		line-height: 120%;
-		color: #000;
+
+		color: var(--black);
 
 		&:not(:last-child) {
 			border-bottom: 1px solid #bec2c3;
@@ -69,14 +69,13 @@
 
 			font-weight: 600;
 			font-size: 15px;
-			line-height: 120%;
-			color: #000;
+
+			color: var(--black);
 		}
 	}
 
 	&__right {
 		width: 100%;
-		flex: 1 1 auto;
 	}
 
 	&__right-wrapper {
@@ -88,15 +87,19 @@
 	&__col {
 		padding: 12px 0;
 
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
 		&:not(:last-child) {
-			border-bottom: 1px solid #ffffff;
+			border-bottom: 1px solid var(--white);
 		}
-		font-family: var(--font-family);
+
 		font-weight: 500;
 		font-size: 13px;
-		line-height: 120%;
+
 		text-align: center;
-		color: #fff;
+		color: var(--white);
 	}
 
 	&__row {
@@ -105,11 +108,8 @@
 		gap: 8px;
 
 		.table__col {
-			display: flex;
-			align-items: center;
-			justify-content: center;
 			box-shadow: 1px 1px 13px 1px rgba(0, 0, 0, 0.14);
-			background: #47adf4;
+			background: var(--blue);
 			padding: 8px 0;
 			border-radius: 6px;
 			border: none;
@@ -117,7 +117,7 @@
 			font-weight: 600;
 			font-size: 15px;
 
-			&_color_gray {
+			&--gray {
 				color: #878787;
 				box-shadow: 1px 1px 13px 1px rgba(0, 0, 0, 0.14);
 				background: #d5ecfe;
@@ -131,27 +131,18 @@
 		gap: 8px;
 	}
 
-	&__content {
+	&__col-wrapper {
 		box-shadow: 1px 1px 13px 1px rgba(0, 0, 0, 0.14);
-		background: #47adf4;
+		background: var(--blue);
 		border-radius: 6px;
 		padding: 0 10px;
 
 		&--last {
 			background: #d5ecfe;
+
 			.table__col {
 				color: #787676;
 			}
 		}
-
-		.table__col {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-	}
-}
-.table-wrapper {
-	&__table {
 	}
 }

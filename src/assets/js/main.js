@@ -1,5 +1,5 @@
 const leftSideColumns = document.querySelectorAll('.table__left-col');
-const rightSideTables = document.querySelectorAll('.table__content');
+const rightSideTables = document.querySelectorAll('.table__col-wrapper');
 
 const setColumnHeight = (columnIndex, height) => {
 	rightSideTables.forEach(table => {
