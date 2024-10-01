@@ -1,8 +1,8 @@
-const tables = document.querySelectorAll('.table');
+document.addEventListener('DOMContentLoaded', () => {
+	const table = document.querySelector('.table');
+	console.log(table);
 
-tables.forEach(table => {
 	const leftCols = table.querySelectorAll('.table__left-col');
-	const rightCols = table.querySelectorAll('.table__col');
 
 	let maxValue;
 
