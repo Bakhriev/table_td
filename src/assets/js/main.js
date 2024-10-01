@@ -1,6 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.fonts.ready.then(() => {
 	const table = document.querySelector('.table');
-	console.log(table);
 
 	const leftCols = table.querySelectorAll('.table__left-col');
 
@@ -11,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		const identicalCols = [...table.querySelectorAll(`[data-col="${dataId}"]`)];
 
-		const heights = identicalCols.map(col => col.clientHeight + 5);
+		const heights = identicalCols.map(col => col.clientHeight + 10);
 
 		const maxValue = Math.max(...heights);
 
