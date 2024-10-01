@@ -12,9 +12,6 @@ tables.forEach(table => {
 		const identicalCols = [...table.querySelectorAll(`[data-col="${dataId}"]`)];
 
 		const heights = identicalCols.map(col => col.clientHeight + 5);
-		if (dataId === 3) {
-			console.log(identicalCols);
-		}
 
 		const maxValue = Math.max(...heights);
 
