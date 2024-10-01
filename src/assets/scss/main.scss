@@ -54,6 +54,9 @@
 	}
 
 	&__left-col {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
 		padding-top: 12px;
 		padding-bottom: 12px;
 

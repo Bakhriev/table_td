@@ -9,11 +9,10 @@ tables.forEach(table => {
 	leftCols.forEach((elem, i) => {
 		const dataId = elem.dataset.col;
 
-		const identicalCols = [
-			...document.querySelectorAll(`[data-col="${dataId}"]`),
-		];
+		const identicalCols = [...table.querySelectorAll(`[data-col="${dataId}"]`)];
 
 		const heights = identicalCols.map(col => col.clientHeight + 2);
+		console.log(identicalCols, heights, dataId);
 
 		const maxValue = Math.max(...heights);
 
