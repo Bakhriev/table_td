@@ -34,3 +34,12 @@ body {
 	max-width: $maxWidth + ($padding * 2);
 	width: 100%;
 }
+
+.telegram {
+	margin: 0 auto;
+	display: block;
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	color: #fff;
+}
